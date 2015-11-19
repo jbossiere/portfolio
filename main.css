@@ -1,9 +1,18 @@
-.parallax-container {
-	height: 100px;
+/*positions logo in navbar*/
+img.brand-logo {
+	height: 61px;
+	padding-left: 30px;
+	padding-bottom: 5px;
 }
 
-img {	
-	min-width: 100%;
-	min-height:100%;
-	height: auto;
+/*makes navbar links inline and spaces them out*/
+nav li {
+	display: inline;
+	padding-right: 30px;
+	text-align: left;
+}
+
+/*gets rid of underline links on hover*/
+a:hover {
+	text-decoration: none;
 }

@@ -13,31 +13,31 @@
 	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
 	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
-	  	
-	  	<!-- font -->
-	  	<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+
+	  	<!-- ui-router -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>	  	         
+
 	  	<!-- Read scripts -->
 	  	<link rel="stylesheet" type="text/css" href="main.css">
 	  	<script src="portfolio.js"></script>
-
-	  	<!-- Materialize CSS -->
-	  	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-	  	 <!-- Materialize JavaScript -->
-	  	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-	  	         
-
 	</head>
 
 	<body>
-		<div class="parallax-container">
-			<div class="parallax">
-				<img id="headerImg" alt="julians desktop" src="img/desktop.JPG">
+		<div ng-app="myApp">
+
+			<nav>
+				<ul>
+					<li><a ui-sref="landing"><img class="brand-logo" src="img/j-logo.png"></a></li>
+					<li><a ui-sref="landing">Home</a></li>
+					<li><a ui-sref="about">About</a></li>
+					<li><a ui-sref="contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="container">
+				<div ui-view></div>
 			</div>
-		</div>
-		<div class="section white">
-			<div class="row container">
-				<h2 class="header">Hello</h2>
-			</div>
+
 		</div>
 	</body>
 </html>
