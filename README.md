@@ -1,5 +1,6 @@
 # portfolio
-1. What is the URL of this project on your student web-server?
+1. What is the URL of this project on your student web-server?<br>
+  students.washington.edu/jgb93/info343/portfolio
 
 2. Did you receive help from any other sources (classmates, etc.)? If so, please list who.
 
