@@ -4,9 +4,9 @@ var app = angular.module('myApp', ['ui.router', 'ui.materialize']);
 // Configure app
 app.config(function($stateProvider){
 	$stateProvider
-		.state('landing', {
+		.state('home', {
 			url: '/',
-			templateUrl: "index.html",
+			templateUrl: "templates/home.html",
 			controller: "HomeController"
 		})
 		.state('about', {
@@ -22,7 +22,7 @@ app.config(function($stateProvider){
 });
 
 app.controller('HomeController', function($scope, $http){
-
+	$scope.place = 'at the library.'
 });
 
 app.controller('AboutController', function($scope, $http){

@@ -41,11 +41,14 @@
 	</head>
 
 	<body>
+<!-- 		<div class="full-img">
+			<h1>My name's Julian</h1>
+		</div> -->
 		<div ng-app="myApp">
 
 			<header>
 				<ul>
-					<li><a class="linkedin" href="https://www.linkedin.com/" target="_blank"><img class="linkedin" src="img/linkedin-white.png"></a></li>
+					<li><a class="linkedin" href="https://www.linkedin.com/" target="_blank"><img class="linkedin" src="img/linkedin-black.png"></a></li>
 					<li><a ui-sref="contact">Contact</a></li>
 					<li><a ui-sref="about">About</a></li>
 					<li><a ui-sref="home">Home</a></li>		
@@ -53,7 +56,9 @@
 				</ul>
 			</header>
 
-			<div ui-view></div>
+			<div class="container">
+				<div ui-view></div>
+			</div>
 
 			<footer>
 			</footer>

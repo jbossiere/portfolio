@@ -1,4 +1,6 @@
 div.full-img {
+	margin: 0;
+	padding: 0;
 	background-image: url(../img/skyline.png);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -8,26 +10,19 @@ div.full-img {
 
 /*positions logo in navbar*/
 img.brand-logo {
-	float: left;
 	height: 61px;
 	padding-left: 30px;
 	padding-bottom: 5px;
 }
 
+/*adjusts size of linkedin logo*/
 header .linkedin {
 	height: 1.3em;
 }
 
-header {
-	height: 100%;
-}
-
+/*adjusts color of header text*/
 header a {
-	color: black;
-}
-
-ul {	
-display: inline;
+	color: white;
 }
 
 /*makes navbar links inline and spaces them out*/
@@ -37,6 +32,7 @@ header li {
 	display: inline;
 }
 
+/*gives links some padding*/
 header a {
 	padding-right: 1em;
 }
@@ -44,4 +40,22 @@ header a {
 /*gets rid of underline links on hover*/
 a:hover {
 	text-decoration: none;
+	color: #ff0000;
 }
+
+.titles {
+	top: 50%;
+	color: white;
+	text-align: center;
+}
+
+h1.title {
+	margin: 0;
+}
+
+h2.subtitle {
+	margin: 0;
+	font-size: 2em;
+}
+
+/*http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window*/
