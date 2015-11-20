@@ -1,15 +1,37 @@
 /*positions logo in navbar*/
 img.brand-logo {
+	float: left;
 	height: 61px;
 	padding-left: 30px;
 	padding-bottom: 5px;
 }
 
+header .linkedin {
+	height: 1.3em;
+}
+
+header {
+	height: 40px;
+}
+
+header a {
+	color: black;
+}
+
+ul {
+/*	text-align: right;
+*/	display: inline;
+}
+
 /*makes navbar links inline and spaces them out*/
-nav li {
+header li {
+	margin-top: 10px;
+	float: right;
 	display: inline;
-	padding-right: 30px;
-	text-align: left;
+}
+
+header a {
+	padding-right: 1em;
 }
 
 /*gets rid of underline links on hover*/
