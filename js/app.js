@@ -1,7 +1,5 @@
 // Initialize app
-var app = angular.module('myApp', ['ui.router', 'ui.material']);
-
-$.backstretch("img/skyline.png");
+var app = angular.module('myApp', ['ui.router', 'ui.materialize']);
 
 // Configure app
 app.config(function($stateProvider){

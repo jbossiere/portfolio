@@ -1,7 +1,8 @@
-header {
-	background-image: url(img/skyline.png);
-	background-repeat: none;
+div.full-img {
+	background-image: url(../img/skyline.png);
+	background-repeat: no-repeat;
 	background-position: center;
+	background-attachment: fixed;
 	background-size: cover;
 }
 
@@ -18,7 +19,7 @@ header .linkedin {
 }
 
 header {
-	height: 40px;
+	height: 100%;
 }
 
 header a {
