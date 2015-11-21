@@ -1,4 +1,6 @@
 # portfolio
+The instructions are described [here](http://faculty.washington.edu/mikefree/info343/#/challenges/portfolio).
+
 1. What is the URL of this project on your student web-server?<br>
   students.washington.edu/jgb93/info343/portfolio
 
