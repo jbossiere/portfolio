@@ -1,11 +1,22 @@
+
+
+/*creates full background image that responds to viewport size
+  Also sets font style*/
 div.full-img {
-	margin: 0;
-	padding: 0;
+
+	font-family: 'Varela Round', sans-serif;
+	height: 100vh;
 	background-image: url(../img/skyline.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
+}
+
+/*Gives navigation bar font style*/
+header.navigation {
+	font-family: 'Varela Round', sans-serif;
+	font-variant: small-caps;
 }
 
 /*positions logo in navbar*/
@@ -17,12 +28,14 @@ img.brand-logo {
 
 /*adjusts size of linkedin logo*/
 header .linkedin {
+	fill: currentColor;
 	height: 1.3em;
 }
 
-/*adjusts color of header text*/
+/*adjusts color of header text, and padding*/
 header a {
 	color: white;
+	padding-right: 1em;
 }
 
 /*makes navbar links inline and spaces them out*/
@@ -32,30 +45,44 @@ header li {
 	display: inline;
 }
 
-/*gives links some padding*/
-header a {
-	padding-right: 1em;
-}
-
 /*gets rid of underline links on hover*/
 a:hover {
 	text-decoration: none;
-	color: #ff0000;
+	color: #cccccc;
 }
 
+/*Positions all titles to center of page*/
 .titles {
+	position: absolute;
 	top: 50%;
+	left: 50%;
+	/*margin-right: -50%;*/
+	transform: translate(-50%, -50%);
 	color: white;
 	text-align: center;
 }
 
+/*Adjusts margin of main title*/
 h1.title {
 	margin: 0;
+	transition: font-size 0.5s;
 }
 
-h2.subtitle {
-	margin: 0;
+/*adjusts size and position of subtitle*/
+h2.subtitle-main {
+	margin-top: 10px;
+	margin-bottom: 5px;
 	font-size: 2em;
+	transition: font-size 1s;
 }
 
-/*http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window*/
+/*Changes size of titles to optimize for mobile*/
+@media screen and (max-width: 768px) {
+	h1.title {
+		font-size: 3em;
+	}
+
+	h2.subtitle-main {
+		font-size: 1.5em;
+	}
+}
