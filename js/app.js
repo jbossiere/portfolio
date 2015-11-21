@@ -1,11 +1,12 @@
 // Initializes the angular app
 var app = angular.module('myApp', ['ui.router', 'ui.materialize']);
 
+
 // Configure app to give separate controllers for the various html fragment/templates
 app.config(function($stateProvider){
 	$stateProvider
 		.state('home', {
-			url: '/',
+			url: '/home',
 			templateUrl: "templates/home.html",
 			controller: "HomeController"
 		})
@@ -21,9 +22,19 @@ app.config(function($stateProvider){
 		})
 });
 
-// Creates a controller for the home fragment/template
+// Creates a controller for the home fragment/template, then parses through a csv file to get data
+// to show on the page
 app.controller('HomeController', function($scope, $http){
-	$scope.place = 'at the library.'
+
+	Papa.parse("../data/home.csv", {
+		download: true,
+		header: true,
+		complete: function(results) {
+			console.log(results);
+			$scope.projects = results.data;
+		}
+	});
+
 });
 
 // Creates a controller for the about fragment/template

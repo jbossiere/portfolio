@@ -1,10 +1,11 @@
 
+/*STYLING FOR HOME PAGE*/
 
 /*creates full background image that responds to viewport size
   Also sets font style*/
 div.full-img {
 
-	font-family: 'Varela Round', sans-serif;
+	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 100vh;
 	background-image: url(../img/skyline.png);
 	background-repeat: no-repeat;
@@ -20,11 +21,11 @@ header.navigation {
 }
 
 /*positions logo in navbar*/
-img.brand-logo {
+/*img.brand-logo {
 	height: 61px;
 	padding-left: 30px;
 	padding-bottom: 5px;
-}
+}*/
 
 /*adjusts size of linkedin logo*/
 header .linkedin {
@@ -85,4 +86,36 @@ h2.subtitle-main {
 	h2.subtitle-main {
 		font-size: 1.5em;
 	}
+}
+
+.projects {
+	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
+}
+
+/*Align heading for projects section*/
+h1.projects-heading {
+	text-align: center;
+}
+
+img.projectGif {
+/*	position: absolute;
+*/	display: block;
+	margin-left: auto;
+	margin-right: auto;
+/*	z-index: 10;
+*/	width: 100%;
+	height: auto;
+}
+
+/*img.macbook {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+}*/
+
+.projectContainer {
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
