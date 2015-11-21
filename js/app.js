@@ -36,4 +36,3 @@ app.controller('ContactController', function($scope, $http){
 	$scope.email = "julianbossiere@gmail.com";
 });
 
-// https://docs.google.com/spreadsheets/d/1eanSlyrxYxTjJwotoHg25OGj1gNG_ieDkRdTJKiydts/edit#gid=0
