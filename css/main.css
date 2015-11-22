@@ -98,24 +98,40 @@ h1.projects-heading {
 }
 
 img.projectGif {
-/*	position: absolute;
-*/	display: block;
-	margin-left: auto;
+	position: absolute;
+/*	display: block;
+*/	margin-left: 92px;
+	margin-top: 41px; 
 	margin-right: auto;
-/*	z-index: 10;
-*/	width: 100%;
-	height: auto;
+	z-index: 10;
+	width: 67%;
+	height: 70%;
 }
 
-/*img.macbook {
+/* old version of above
+img.projectGif {
+	position: absolute;
+	display: block;
+	margin-left: auto; 
+	margin-right: auto;
+	z-index: 10;
+	width: 100%;
+	height: auto;
+}*/
+
+img.macbook {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 	height: auto;
-}*/
+}
 
 .projectContainer {
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+div.chip {
+	margin-bottom: 5px;
 }
