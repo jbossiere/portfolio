@@ -14,36 +14,49 @@ div.full-img {
 	background-size: cover;
 }
 
-/*Gives navigation bar font style*/
-header.navigation {
+/*Gives navigation bars font style*/
+.navigation {
 	font-family: 'Varela Round', sans-serif;
 	font-variant: small-caps;
 }
 
-/*positions logo in navbar*/
-/*img.brand-logo {
-	height: 61px;
-	padding-left: 30px;
-	padding-bottom: 5px;
-}*/
-
-/*adjusts size of linkedin logo*/
-header .linkedin {
+/*style for header: 
+  - adjusts size of linkedin logo
+  - adjusts color of header text, and padding
+  - makes navbar links inline and spaces them out*/
+div.headerNav .linkedin {
 	fill: currentColor;
 	height: 1.3em;
 }
-
-/*adjusts color of header text, and padding*/
-header a {
+div.headerNav a {
 	color: white;
 	padding-right: 1em;
 }
-
-/*makes navbar links inline and spaces them out*/
-header li {
+div.headerNav li {
 	margin-top: 10px;
 	float: right;
 	display: inline;
+}
+
+/*style for footer: 
+  - adjusts size and color of linkedin logo
+  - adjusts color and of footer text and padding
+  - makes nav links inline and spaces them out*/
+div.footerNav a {
+	color: black;
+	padding-right: 1em;
+}
+div.footerNav .linkedin {
+	fill: currentColor;
+	height: 1.3em;
+}
+div.footerNav li {
+	display: inline;
+}
+div.footerNav {
+	text-align: center;
+	padding: 35px 0 35px;
+	background-color: #f3f3f3;
 }
 
 /*gets rid of underline links on hover*/
@@ -52,24 +65,23 @@ a:hover {
 	color: #cccccc;
 }
 
-/*Positions all titles to center of page*/
+/*style for titles: 
+  - Positions all titles to center of page
+  - Adjusts margin of main title
+  - adjusts size and position of subtitle*/
 .titles {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	/*margin-right: -50%;*/
 	transform: translate(-50%, -50%);
 	color: white;
 	text-align: center;
 }
-
-/*Adjusts margin of main title*/
 h1.title {
+	font-weight: bold;
 	margin: 0;
 	transition: font-size 0.5s;
 }
-
-/*adjusts size and position of subtitle*/
 h2.subtitle-main {
 	margin-top: 10px;
 	margin-bottom: 5px;
@@ -77,61 +89,53 @@ h2.subtitle-main {
 	transition: font-size 1s;
 }
 
-/*Changes size of titles to optimize for mobile*/
+/*Settings to optimize for mobile*/
 @media screen and (max-width: 768px) {
+	/*Change title font size*/
 	h1.title {
 		font-size: 3em;
 	}
-
+	/*change subtitle font size*/
 	h2.subtitle-main {
 		font-size: 1.5em;
 	}
+	/*center text*/
+	.project-info {
+		text-align: center;
+	}
 }
 
+/*style for projects section: 
+  - Set fonts for projects section
+  - Align heading for projects section
+  - displays max width images of the gifs that preview the project
+  - adjust margins on the whole project section*/
 .projects {
 	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
 }
-
-/*Align heading for projects section*/
 h1.projects-heading {
 	text-align: center;
 }
-
 img.projectGif {
-	position: absolute;
-/*	display: block;
-*/	margin-left: 92px;
-	margin-top: 41px; 
-	margin-right: auto;
-	z-index: 10;
-	width: 67%;
-	height: 70%;
-}
-
-/* old version of above
-img.projectGif {
-	position: absolute;
 	display: block;
 	margin-left: auto; 
 	margin-right: auto;
-	z-index: 10;
-	width: 100%;
-	height: auto;
-}*/
-
-img.macbook {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	width: 100%;
 	height: auto;
 }
-
 .projectContainer {
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
 
+/*adjust margin on the chips*/
 div.chip {
 	margin-bottom: 5px;
+}
+
+/*divider between each separate project*/
+hr.project-split {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

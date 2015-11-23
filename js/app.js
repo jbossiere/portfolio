@@ -32,15 +32,21 @@ app.controller('HomeController', function($scope, $http){
 		complete: function(results) {
 			console.log(results);
 			$scope.projects = results.data;
-			for (i  = 0; i < results.data.length; i++) {
-				Papa.parse(results.data[i].tags, {
-					complete: function(results) {
-						console.log(results);
-					}
-				});
-			};
+			// for (i  = 0; i < results.data.length; i++) {
+			// 	Papa.parse(results.data[i].tags, {
+			// 		complete: function(results) {
+			// 			console.log(results)
+			// 			console.log(results.data);
+			// 		}
+			// 	});
+			// };
 		}
 	});
+
+
+	// $scope.animation = function(project) {
+	// 	$attr('src', 'project.imgUrl')
+	// };
 
 
 });
