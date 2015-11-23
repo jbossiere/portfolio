@@ -1,7 +1,6 @@
 // Initializes the angular app
 var app = angular.module('myApp', ['ui.router', 'ui.materialize']);
 
-
 // Configure app to give separate controllers for the various html fragment/templates
 app.config(function($stateProvider){
 	$stateProvider

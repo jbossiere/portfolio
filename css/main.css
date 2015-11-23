@@ -15,45 +15,22 @@ div.full-img {
 	background-size: cover;
 }
 
-/*Gives navigation bars font style*/
-.navigation {
-	font-family: 'Varela Round', sans-serif;
-	font-variant: small-caps;
-	/*height: 40px;*/
+.navbar-fixed {
+	height: 0;
 }
 
-/*style for header: 
-  - adjusts size of linkedin logo
-  - adjusts color of header text, and padding
-  - makes navbar links inline and spaces them out*/
-header {
-/*	position: fixed;
-*/	background-color: rgba(192,192,192,0.6);
-	z-index: 1000;
-	width: 100%;
-	height: 40px;
-	right: 0;
-	left: 0;
-	margin: 0;
-	z-index: 50;
-	display: inline-block;
+nav {
+	font-family: 'Varela Round', sans-serif;
+	font-variant: small-caps;
+	background-color: rgba(192,192,192,0.6);
+	box-shadow: none;
 }
-header.headerNav .linkedin {
-	fill: currentColor;
-	height: 1.3em;
-}
-header.headerNav a {
+a.link {
 	color: black;
-}
-header.headerNav li {
-	margin-top: 10px;
-	float: right;
-	display: inline;
-	padding-right: 1.5em;
+	font-size: 1.3em;
 }
 
 /*style for footer: 
-  - adjusts size and color of linkedin logo
   - adjusts color and of footer text and padding
   - makes nav links inline and spaces them out*/
 div.footerNav a {
@@ -64,6 +41,8 @@ div.footerNav li {
 	display: inline;
 }
 div.footerNav {
+	font-family: 'Varela Round', sans-serif;
+	font-variant: small-caps;
 	text-align: center;
 	padding: 35px 0 35px;
 	background-color: #f3f3f3;
@@ -82,7 +61,7 @@ a:hover {
   - Positions all titles to center of page
   - Adjusts margin of main title
   - adjusts size and position of subtitle*/
-.titles {
+.hometitles {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -100,22 +79,6 @@ h2.subtitle-main {
 	margin-bottom: 5px;
 	font-size: 2em;
 	transition: font-size 1s;
-}
-
-/*Settings to optimize for mobile*/
-@media screen and (max-width: 768px) {
-	/*Change title font size*/
-	h1.title {
-		font-size: 3em;
-	}
-	/*change subtitle font size*/
-	h2.subtitle-main {
-		font-size: 1.5em;
-	}
-	/*center text*/
-	.project-info {
-		text-align: center;
-	}
 }
 
 /*style for projects section: 
@@ -144,11 +107,15 @@ img.projectGif {
 	font-weight: bold;
 }
 
-/*adjust margin on the chips*/
-div.chip {
-	margin-bottom: 5px;
+.proj-body {
+	font-size: 16px;
 }
 
+/*adjust margin on the chips*/
+/*div.chip {
+	margin-bottom: 5px;
+}
+*/
 /*divider between each separate project*/
 hr.project-split {
 	border: 0;
@@ -156,12 +123,32 @@ hr.project-split {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+/*Settings to optimize for mobile*/
+@media screen and (max-width: 768px) {
+	/*Change title font size*/
+	h1.title {
+		font-size: 3em;
+	}
+	/*change subtitle font size*/
+	h2.subtitle-main {
+		font-size: 1.5em;
+	}
+	/*center text*/
+	.project-info {
+		text-align: center;
+	}
+
+	.proj-body {
+		font-size: 14px;
+	}
+}
+
 /*STYLING FOR ABOUT PAGE
 -----------------------------------------------------------------------------------------------------------*/
-div.about-body {
+div.image-about {
 	background-image: url(../img/desktop.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
-	height: 50vh;
+	height: 60vh;
 	transition: height 0.8s;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -171,10 +158,9 @@ div.about-body {
 
 img.profile-pic {
 	width: 300px;
-	transition: width 1s;
 	height: auto;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	transition: top 0.8s;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -185,11 +171,13 @@ img.profile-pic {
 
 div.bio {
 	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
-	margin-top: 70px;
+	margin-top: 100px;
+	transition: margin-top 0.5s;
 	font-size: 1.3em;
+	max-width: 750px;
 }
 
-h2.aboutme {
+h2.about {
 	text-align: left;
 	transition: text-align 0.5s;
 }
@@ -199,22 +187,91 @@ h2.aboutme {
 		width: 200px;
 	}
 
-	h2.aboutme {
+	h2.about {
 		text-align: center;
 	}
 }
 @media screen and (max-width: 768px) {
-	div.about-body {
-		height: 30vh;
-		background-size: cover;
-	}
-	img.profile-pic {
-		top: 30%;
-		width: 150px;
-	}
 	div.bio {
 		font-size: 1.1em;
 	}
+
+	h2.about {
+		font-size: 2.5em;
+	}
+}
+@media screen and (max-width: 480px) {
+	div.bio {
+		margin-top: 70px;
+	}
+	img.profile-pic {
+		/*top: 30%;*/
+		width: 150px;
+	}
+/*	div.image-about {
+		height: 30vh;
+	}*/
 }
 
+.easteregg {
+	color: black;
+}
+/*STYLING FOR CONTACT PAGE
+-----------------------------------------------------------------------------------------------------------*/
+div.image-contact {
+	background-image: url(../img/sunset.jpg);
+	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
+	height: 60vh;
+	transition: height 0.8s;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
 
+.contacttitle {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
+.contact {
+	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 1.3em;
+	max-width: 750px;
+}
+
+h3.getintouch {
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+p#thing {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+div#icons {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.social-icon {
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+i {
+	color: black;
+	padding-top: 5px;
+	border: solid 2px;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+}
