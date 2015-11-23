@@ -9,15 +9,11 @@
 	<div class="container projectContainer" ng-repeat="project in projects">
 		<div class="row">
 			<div class="col-xs-12 col-md-6">
-				<img class="projectGif" src="{{project.gifUrl}}" ng-mouseover="animation(project)">
+				<img class="projectGif" src="{{project.gifUrl}}" ng-hide="projects.length < 0">
 			</div>
 			<div class="col-xs-12 col-md-6">
 				<h4 class="project-info proj-title">{{project.title}}</h4>
 				<p class="project-info proj-body">{{project.description}}</p>
-<!-- 				<div class="chip">
-					{{project.tags}}
-				</div>
- -->				<br>
 				<a class="project-info" target="_blank" href="{{project.link}}">View the live site</a>
 			</div>
 		</div>
@@ -25,4 +21,3 @@
 	</div>
 </div>
 
-<!-- possibly aimate title text with https://fabriceleven.com/design/creating-fancy-css3-fade-in-animations-on-page-load/-->

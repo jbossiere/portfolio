@@ -150,7 +150,7 @@ hr.project-split {
 /*STYLING FOR ABOUT PAGE
 -----------------------------------------------------------------------------------------------------------*/
 div.image-about {
-	background-image: url(../img/desktop.jpg);
+	background-image: url(https://truthman30.files.wordpress.com/2015/04/hello-picture.gif);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
@@ -279,4 +279,7 @@ i {
 	border-radius: 50%;
 	width: 45px;
 	height: 45px;
+}
+i:hover {
+	color: #6699ff;
 }
