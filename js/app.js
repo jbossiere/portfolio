@@ -23,7 +23,7 @@ app.config(function($stateProvider){
 // to show on the page
 app.controller('HomeController', function($scope){
 	angular.element(document).ready(function() {
-		Papa.parse("../data/home.csv", {
+		Papa.parse("../portfolio/data/home.csv", {
 			download: true,
 			header: true,
 			complete: function(results) {
