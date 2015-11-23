@@ -224,7 +224,7 @@ h2.about {
 /*STYLING FOR CONTACT PAGE
 -----------------------------------------------------------------------------------------------------------*/
 div.image-contact {
-	background-image: url(../img/sunset.jpg);
+	background-image: url(../img/sunset.JPG);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
