@@ -179,6 +179,7 @@ div.bio {
 	transition: margin-top 0.5s;
 	font-size: 1.3em;
 	max-width: 750px;
+	margin-bottom: 3em;
 }
 
 h2.about {
