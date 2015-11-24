@@ -55,6 +55,8 @@
 	<body>
 		<div ng-app="myApp">
 
+			<!-- A navbar that is styled using the Materialize library.  
+			It is fixed at the top of the viewport, links are right aligned -->
  			<div class="navbar-fixed">
 	 			<nav>
 	 				<div class="nav-wrapper navigation">
@@ -67,17 +69,19 @@
 	 			</nav>
 	 		</div>
 
+	 		<!-- The div where all of my HTML fragments will are redirected to -->
 			<div>
 				<div ui-view></div>
 			</div>
 
+			<!-- The footer, which contain links to my github, resume, and linkedin -->
 			<div class="footerNav navigation">
 				<li><a href="https://github.com/jbossiere" target="_blank">GitHub</a></li>
 				<li><a href="other/resume201511.pdf" target="_blank">Resume</a></li>
 				<li><a href="https://www.linkedin.com/in/julianbossiere" target="_blank">LinkedIn</a></li>
-
 				<p class="footertext">coded and designed by julian bossiere<p>
 			</div>
+			
 		</div>
 	</body>
 </html>
