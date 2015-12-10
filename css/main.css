@@ -8,7 +8,7 @@ div.full-img {
 
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 100vh;
-	background-image: url(../img/skyline.png);
+	background-image: url(../img/julian-rooftop.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -147,12 +147,31 @@ hr.project-split {
 	}
 }
 
+/*positions text that tells user that s/he can hover over
+  image to view preview*/
+p#hover-over-img {
+	margin-top: 10px;	
+	text-align: center;
+}
+
+
+/*i.fa-caret-down {
+	border: none;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	color: white;
+	animation-delay:1.5s; 
+	-moz-animation-delay:1.5s; 
+	-webkit-animation-delay:1.5s;
+}*/
+
 /*STYLING FOR ABOUT PAGE
 -----------------------------------------------------------------------------------------------------------*/
 /*Background image positioning and sizing
  - adds a transition for height of image section for smaller screens*/
 div.image-about {
-	background-image: url(../img/desktop.JPG);
+	background-image: url(../img/desktop.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
@@ -181,7 +200,7 @@ img.profile-pic {
  - adds font and positioning, as well as transition to adjust size*/
 div.bio {
 	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
-	margin-top: 100px;
+	margin-top: 130px;
 	transition: margin-top 0.5s;
 	font-size: 1.3em;
 	max-width: 750px;
@@ -222,7 +241,7 @@ h2.about {
  - adjusts size of profile pic*/
 @media screen and (max-width: 480px) {
 	div.bio {
-		margin-top: 70px;
+		margin-top: 100px;
 	}
 	img.profile-pic {
 		width: 150px;
@@ -241,7 +260,7 @@ h2.about {
 /*Style for Contact page background image
  - positions image and changes font of text*/
 div.image-contact {
-	background-image: url(../img/sunset.JPG);
+	background-image: url(../img/sunset.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
@@ -253,7 +272,7 @@ div.image-contact {
 
 /*style for contact title (text over background image)
  - positions on page, and changes font color*/
-.contacttitle {
+.sectiontitle {
 	position: absolute;
 	top: 30%;
 	left: 50%;
