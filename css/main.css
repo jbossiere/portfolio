@@ -171,7 +171,7 @@ p#hover-over-img {
 /*Background image positioning and sizing
  - adds a transition for height of image section for smaller screens*/
 div.image-about {
-	background-image: url(../img/shinjuku.jpg);
+	background-image: url(../img/desktop.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
@@ -260,7 +260,7 @@ h2.about {
 /*Style for Contact page background image
  - positions image and changes font of text*/
 div.image-contact {
-	background-image: url(../img/shinjuku.jpg);
+	background-image: url(../img/sunset.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
