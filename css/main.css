@@ -260,7 +260,7 @@ h2.about {
 /*Style for Contact page background image
  - positions image and changes font of text*/
 div.image-contact {
-	background-image: url(../img/sunset.jpg);
+	background-image: url(../img/shinjuku.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
 	transition: height 0.8s;
