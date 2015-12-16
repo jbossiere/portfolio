@@ -12,10 +12,12 @@ app.config(function($stateProvider){
 		.state('about', {
 			url: '/about',
 			templateUrl: 'templates/about.html',
+			controller: "AboutController"
 		})
 		.state('contact', {
 			url: '/contact',
 			templateUrl: 'templates/contact.html',
+			controller: "ContactController"
 		})
 });
 
@@ -25,7 +27,12 @@ app.config(function($stateProvider){
 // - $scope.$apply() is used because papa.parse is asynchronous and not angular, angular has it's own
 // 	 event loop, but since papa.parse is not part of it, it doesn't automatically get updated with the 
 // 	 rest of angular.  the $apply() tells angular to update for this controller
-app.controller('HomeController', function($scope){
+app.controller('HomeController', function($scope, $location, $anchorScroll){
+	angular.element(document).ready(function() {
+		$location.hash("top");
+		$anchorScroll();
+	}); 
+
 	Papa.parse("data/home.csv", {
 		download: true,
 		header: true,
@@ -34,4 +41,18 @@ app.controller('HomeController', function($scope){
 			$scope.$apply();
 		}
 	});
+});
+
+app.controller("AboutController", function($scope, $location, $anchorScroll){
+	angular.element(document).ready(function() {
+		$location.hash("top");
+		$anchorScroll();
+	}); 
+});
+
+app.controller("ContactController", function($scope, $location, $anchorScroll){
+	angular.element(document).ready(function() {
+		$location.hash("top");
+		$anchorScroll();
+	}); 
 });
