@@ -49,7 +49,7 @@ div.footerNav {
 	font-family: 'Varela Round', sans-serif;
 	font-variant: small-caps;
 	text-align: center;
-	padding: 35px 0 35px;
+	padding: 5px 0 5px; /*padding was 35px 0px 35px when links are in footer*/
 	background-color: #f3f3f3;
 }
 .footertext {
