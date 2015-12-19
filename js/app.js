@@ -5,7 +5,7 @@ var app = angular.module('myApp', ['ui.router', 'ui.materialize']);
 app.config(function($stateProvider){
 	$stateProvider
 		.state('home', {
-			url: '/home',
+			url: '/',
 			templateUrl: "templates/home.html",
 			controller: "HomeController"
 		})
@@ -29,7 +29,7 @@ app.config(function($stateProvider){
 // 	 rest of angular.  the $apply() tells angular to update for this controller
 app.controller('HomeController', function($scope, $location, $anchorScroll){
 	angular.element(document).ready(function() {
-		$location.hash("top");
+		$location.hash("");
 		$anchorScroll();
 	}); 
 
@@ -45,14 +45,14 @@ app.controller('HomeController', function($scope, $location, $anchorScroll){
 
 app.controller("AboutController", function($scope, $location, $anchorScroll){
 	angular.element(document).ready(function() {
-		$location.hash("top");
+		$location.hash("");
 		$anchorScroll();
 	}); 
 });
 
 app.controller("ContactController", function($scope, $location, $anchorScroll){
 	angular.element(document).ready(function() {
-		$location.hash("top");
+		$location.hash("");
 		$anchorScroll();
 	}); 
 });
