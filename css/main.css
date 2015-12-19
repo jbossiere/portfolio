@@ -24,11 +24,11 @@ div.full-img {
 }
 nav {
 	font-family: 'Varela Round', sans-serif;
-	font-variant: small-caps;
-	background-color: rgba(192,192,192,0.5);
+/*	font-variant: small-caps;
+*/	background-color: rgba(192,192,192,0.5);
 	box-shadow: none;
 }
-a.link {
+.link {
 	color: black;
 	font-size: 1.1em;
 	text-decoration: none;
@@ -247,11 +247,6 @@ h2.about {
 		width: 150px;
 	}
 
-}
-
-/*Change font color to hide the easter egg on the page*/
-.easteregg {
-	color: black;
 }
 
 
