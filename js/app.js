@@ -33,11 +33,20 @@ app.controller('HomeController', function($scope, $location, $anchorScroll){
 		$anchorScroll();
 	}); 
 
-	Papa.parse("data/home.csv", {
+	Papa.parse("data/webdevprojects.csv", {
 		download: true,
 		header: true,
 		complete: function(results) {
-			$scope.projects = results.data;
+			$scope.webdevprojects = results.data;
+			$scope.$apply();
+		}
+	});
+
+	Papa.parse("data/designprojects.csv", {
+		download: true,
+		header: true,
+		complete: function(results) {
+			$scope.designprojects = results.data;
 			$scope.$apply();
 		}
 	});
