@@ -12,26 +12,54 @@
 	Images, and information for the project section are taken from the csv file that is parsed in app.js
 	the project images are initialized as regular png files, but on mouseenter they turn into .gif files that let the
 	user preview the projects, and on mouseleave, they revert to pngs -->
-<div class="projects">
-	<h1 class="projects-heading">Projects</h1>
-	<div class="container projectContainer" ng-repeat="project in projects">
-		<div class="row">
-			<!-- Div that changes grid position depending on window size for the project img/gif 
-			- it changes between gif and img on mouseenter and mouseleave -->
-			<div class="col-xs-12 col-md-6">
-				<img class="projectGif" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
-				<p id="hover-over-img" ng-hide="oneColumn">Hover over image to preview</p>
-			</div>
+<div id="projects">
+	<h1 id="project-heading">Projects</h1>
+	<button class="btn-secondary active">Web Dev</button>
+	<button class="btn-secondary active">Design</button>
+	<div>
+		<h3 class="section-heading">Web Development</h3>
+		<div class="container projectContainer" ng-repeat="project in webdevprojects">
+			<div class="row">
+				<!-- Div that changes grid position depending on window size for the project img/gif 
+				- it changes between gif and img on mouseenter and mouseleave -->
+				<div class="col-xs-12 col-md-6">
+					<img class="projectGif" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
+					<p id="hover-over-img" ng-hide="oneColumn">Hover over image to preview</p>
+				</div>
 
-			<!-- Div that changes grid position depending on window size for the project info  -->
-			<div class="col-xs-12 col-md-6 project-info">
-				<h4 class="proj-title">{{project.title}}</h4>
-				<p class="proj-body">{{project.description}}</p>
-				<a target="_blank" href="{{project.link}}">View the live site</a>
+				<!-- Div that changes grid position depending on window size for the project info  -->
+				<div class="col-xs-12 col-md-6 project-info">
+					<h4 class="proj-title">{{project.title}}</h4>
+					<p class="proj-body">{{project.description}}</p>
+					<a target="_blank" href="{{project.link}}">View the live site</a>
+				</div>
 			</div>
+			<!-- Creates divier line between each separate project -->
+			<hr class="project-split">
 		</div>
-		<!-- Creates divier line between each separate project -->
-		<hr class="project-split">
+	</div>
+
+	<div>
+		<h3 class="section-heading">Design</h3>
+		<div class="container projectContainer" ng-repeat="project in designprojects">
+			<div class="row">
+				<!-- Div that changes grid position depending on window size for the project img/gif 
+				- it changes between gif and img on mouseenter and mouseleave -->
+				<div class="col-xs-12 col-md-6">
+					<img class="projectGif" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
+					<p id="hover-over-img" ng-hide="oneColumn">Hover over image to preview</p>
+				</div>
+
+				<!-- Div that changes grid position depending on window size for the project info  -->
+				<div class="col-xs-12 col-md-6 project-info">
+					<h4 class="proj-title">{{project.title}}</h4>
+					<p class="proj-body">{{project.description}}</p>
+					<a target="_blank" href="{{project.link}}">View the live site</a>
+				</div>
+			</div>
+			<!-- Creates divier line between each separate project -->
+			<hr class="project-split">
+		</div>
 	</div>
 </div>
 
