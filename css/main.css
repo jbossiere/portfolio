@@ -1,51 +1,5 @@
 
-/*STYLING FOR HOME PAGE
------------------------------------------------------------------------------------------------------------*/
-
-/*creates full-size background image that responds to viewport size
-  Also sets font style*/
-div.full-img {
-
-	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
-	height: 100vh;
-	background-image: url(../img/julian-rooftop.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-/*Style for navbar: 
- - height is 0 so that there won't be a space that opens up above the background image where the navbar is
- - the font, font style and background colors are set
- - link colors, and size are set as well as turning off text-decoration*/
-.navbar-fixed {
-	height: 0;
-}
-nav {
-	font-family: 'Varela Round', sans-serif;
-/*	font-variant: small-caps;
-*/	background-color: rgba(192,192,192,0.5);
-	box-shadow: none;
-}
-.link {
-	color: black;
-	font-size: 1.1em;
-	text-decoration: none;
-}
-
-/*style for footer: 
-  - adjusts color and padding of footer text
-  - makes links inline and spaces them out
-  - gives links various font styling*/
-.footerNav a {
-	color: black;
-	padding-right: 1em;
-}
-.footerNav li {
-	display: inline;
-}
-.footerNav {
+.footer {
 	font-family: 'Varela Round', sans-serif;
 	font-variant: small-caps;
 	text-align: center;
@@ -56,10 +10,16 @@ nav {
 	margin-top: 10px;
 }
 
-/*gets rid of underline links and change color on hover*/
-a:hover {
-	text-decoration: none;
-	color: #cccccc;
+/*creates full-size background image that responds to viewport size
+  Also sets font style*/
+.full-img {
+	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
+	height: 100vh;
+	background-image: url(../img/julian-rooftop.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 /*style for titles (that appear over the image): 
@@ -68,18 +28,91 @@ a:hover {
   - adjusts size and position of subtitle as well as adding delay to the animation*/
 .hometitles {
 	position: absolute;
-	top: 50%;
+	top: 54%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
 	text-align: center;
 }
-h1.title {
-	font-weight: bold;
-	margin: 0;
-	transition: font-size 0.5s;
+
+/*gets rid of underline links and change color on hover*/
+a:hover {
+	text-decoration: none;
+	color: #cccccc;
 }
-h2.subtitle-main {
+
+/*positions text that tells user that s/he can hover over
+  image to view preview*/
+#hover-over-img {
+	margin-top: 10px;	
+	text-align: center;
+}
+
+
+.link {
+	color: black;
+	font-size: 1.1em;
+}
+
+.navbar {
+	font-family: 'Varela Round', sans-serif;
+	background-color: rgba(192,192,192,0.5);
+	border: none;
+	height: 60px;
+}
+.navitem {
+	display: inline;
+	padding-right: 15px;
+	text-decoration: none;
+}
+#navlist {
+	float: right;
+	margin-top: 17px;
+}
+
+/*style for projects section: 
+ - sets fonts, font sizes, font weight
+ - positions png/gifs of projects*/
+#projects {
+	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
+}
+.projectGif {
+	display: block;
+	margin-left: auto; 
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+	border: solid 1px;
+}
+#project-heading {
+	text-align: center;
+	font-size: 38pt;
+}
+.projectContainer {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 85%;
+	max-width: 978px;
+}
+.text-body {
+	font-size: 13pt;
+}
+.proj-title {
+	font-weight: bold;
+}
+
+/*divider between each separate project*/
+.project-split {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.proj-title, #skills, #getintouch {
+	font-size: 25pt;
+}
+
+.subtitle-main {
 	margin-top: 10px;
 	margin-bottom: 5px;
 	font-size: 2em;
@@ -89,53 +122,21 @@ h2.subtitle-main {
 	-webkit-animation-delay:0.7s;
 
 }
-
-/*style for projects section: 
-  - Set fonts for projects section
-  - Align heading for projects section
-  - displays max width images of the gifs that preview the project
-  - adjust margins on the whole project section
-  - add weight to fonts, and change font size for body text*/
-#projects {
-	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
-}
-#project-heading, .section-heading {
-	text-align: center;
-}
-img.projectGif {
-	display: block;
-	margin-left: auto; 
-	margin-right: auto;
-	width: 100%;
-	height: auto;
-	border: solid 1px;
-}
-.projectContainer {
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-.proj-title {
+.title {
 	font-weight: bold;
-}
-.proj-body {
-	font-size: 16px;
-}
-
-/*divider between each separate project*/
-hr.project-split {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	font-size: 43pt;
+	margin: 0;
+	transition: font-size 0.5s;
 }
 
 /*Settings to optimize for mobile devices*/
 @media screen and (max-width: 768px) {
 	/*Change title font size*/
-	h1.title {
+	.title {
 		font-size: 3em;
 	}
 	/*change subtitle font size*/
-	h2.subtitle-main {
+	.subtitle-main {
 		font-size: 1.5em;
 	}
 	/*center text*/
@@ -143,35 +144,15 @@ hr.project-split {
 		text-align: center;
 	}
 
-	.proj-body {
-		font-size: 14px;
+	.text-body {
+		font-size: 11pt;
 	}
 }
-
-/*positions text that tells user that s/he can hover over
-  image to view preview*/
-p#hover-over-img {
-	margin-top: 10px;	
-	text-align: center;
-}
-
-
-/*i.fa-caret-down {
-	border: none;
-	position: absolute;
-	top: 90%;
-	left: 50%;
-	color: white;
-	animation-delay:1.5s; 
-	-moz-animation-delay:1.5s; 
-	-webkit-animation-delay:1.5s;
-}*/
-
 /*STYLING FOR ABOUT PAGE
 -----------------------------------------------------------------------------------------------------------*/
 /*Background image positioning and sizing
  - adds a transition for height of image section for smaller screens*/
-div.image-about {
+#image-about {
 	background-image: url(../img/desktop.jpg);
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 	height: 60vh;
@@ -184,8 +165,8 @@ div.image-about {
 
 /*Positioning and sizing of profile image
  - adds transitions to adjust image size for smaller screens*/
-img.profile-pic {
-	width: 300px;
+#profile-pic {
+	width: 240px;
 	height: auto;
 	position: absolute;
 	top: 60%;
@@ -195,59 +176,48 @@ img.profile-pic {
 	color: white;
 	text-align: center;
 	border: 4px solid white;
+	border-radius: 50%;
 }
 
 /*Styling for body section of about page
  - adds font and positioning, as well as transition to adjust size*/
-div.bio {
+#bio {
 	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
-	margin-top: 130px;
+	margin-top: 140px;
 	transition: margin-top 0.5s;
 	font-size: 1.3em;
 	max-width: 750px;
 	margin-bottom: 3em;
 }
 
-/*Adjusts spacing on about header*/
-h2.about {
-	text-align: left;
-	transition: text-align 0.5s;
-}
-
 /*Optimizes for medium sized laptop screens
  - adjusts profile pic size
  - adjusts position of about header*/
 @media screen and (max-width: 1280px) {
-	img.profile-pic {
-		width: 200px;
-	}
-
-	h2.about {
-		text-align: center;
+	.profile-pic {
+		width: 300px;
 	}
 }
 /*Optimizes for mobile devices
  - changes font size of bio section and about header*/
 @media screen and (max-width: 768px) {
-	div.bio {
+	.bio {
 		font-size: 1.1em;
 	}
-
-	h2.about {
-		font-size: 2.5em;
+	.about {
+		font-size: 20pt;
 	}
 }
 /*Optimizes for smartphone screens
  - adjusts position of bio section
  - adjusts size of profile pic*/
 @media screen and (max-width: 480px) {
-	div.bio {
+	.bio {
 		margin-top: 100px;
 	}
-	img.profile-pic {
-		width: 150px;
+	.profile-pic {
+		width: 20px;
 	}
-
 }
 
 
@@ -287,7 +257,7 @@ div.image-contact {
 }
 
 /*Adjusts positioning of "get in touch" text*/
-h3.getintouch {
+h3#getintouch {
 	text-align: center;
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
