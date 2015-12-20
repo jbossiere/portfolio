@@ -17,18 +17,14 @@
 	  	<script src="https://code.jquery.com/jquery.min.js"></script>
 
 	  	<!-- Bootstrap CSS and JavaScript -->
-	  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	  	<!-- Angular JavaScript -->
 	  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
 
 	  	<!-- ui-router -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>	
-
-		<!-- Materialize CSS and JavaScript-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
 		<!-- Angular Directive for Materialize -->
 		<script src="js/angular-materialize.js"></script>
@@ -42,7 +38,6 @@
 		<!-- Animate.css -->
 		<link rel="stylesheet" href="css/animate.css">
 
-
 	  	<!-- Read scripts -->
 	  	<link rel="stylesheet" type="text/css" href="css/main.css">
 	  	<script src="js/app.js"></script>
@@ -53,15 +48,13 @@
 
 			<!-- A navbar that is styled using the Materialize library.  
 			It is fixed at the top of the viewport, links are right aligned -->
- 			<div id="top" class="navbar-fixed">
+ 			<div id="navbar" class="navbar navbar-default navbar-fixed-top">
 	 			<nav>
-	 				<div class="nav-wrapper navigation">
- 	 					<ul class="right">
-	 						<li><a class="link" ui-sref="home">Home</a></li>
-	 						<li><a class="link" ui-sref="about">About</a></li>
-	 						<li><a class="link" ui-sref="contact">Contact</a></li>
-	 					</ul>
-	 				</div>
+	 				<ul id="navlist">
+ 						<li class="navitem"><a class="link" ui-sref="home">Home</a></li>
+ 						<li class="navitem"><a class="link" ui-sref="about">About</a></li>
+ 						<li class="navitem"><a class="link" ui-sref="contact">Contact</a></li>
+ 					</ul>
 	 			</nav>
 	 		</div>
 
@@ -71,9 +64,7 @@
 			</div>
 
 			<!-- The footer, which contain links to my github, resume, and linkedin -->
-			<div class="footerNav navigation">
-<!-- 				<li><a href="https://github.com/jbossiere" target="_blank">GitHub</a></li>
-				<li><a href="https://www.linkedin.com/in/julianbossiere" target="_blank">LinkedIn</a></li> -->
+			<div class="footer navigation">
 				<p class="footertext">coded and designed by julian bossiere<p>
 			</div>
 			
