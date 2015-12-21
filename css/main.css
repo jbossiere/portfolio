@@ -1,40 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
-.footer {
-	font-family: 'Varela Round', sans-serif;
-	font-variant: small-caps;
+/*Styling for body section of about page
+ - adds font and positioning, as well as transition to adjust size*/
+#bio {
+	margin-top: 140px;
+	transition: margin-top 0.5s;
+	margin-bottom: 3em;
+}
+
+#bio, #contact {
+	max-width: 750px;
+}
+
+#bio, #contact, #projects {
+	font-family: 'Lato', Helvetica Neue, Helvetica, sans-serif;
+}
+
+/*Style for body of contact page
+ - sets body font, and aligns text to center*/
+#contact {
+	text-align: center;
+}
+
+#footer {
 	text-align: center;
 	padding: 5px 0 5px; /*padding was 35px 0px 35px when links are in footer*/
 	background-color: #f3f3f3;
 }
-.footertext {
+#footertext {
 	margin-top: 10px;
 }
 
-/*creates full-size background image that responds to viewport size
-  Also sets font style*/
-.full-img {
+#footer, #navbar, #image-about, #image-contact, #image-home {
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
-	height: 100vh;
-	background-image: url(../img/julian-rooftop.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
 }
 
-/*style for titles (that appear over the image): 
-  - Positions all titles to center of page
-  - Adjusts margin of main title
-  - adjusts size and position of subtitle as well as adding delay to the animation*/
-.hometitles {
-	position: absolute;
+/*Adjusts positioning of "get in touch" text*/
+#getintouch {
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+
+/*style for titles (that appear over the image)*/
+#hometitle {
 	top: 54%;
+}
+
+#hometitle, .sectiontitle, #profile-pic {
+	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
 	text-align: center;
 }
 
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+
+}
 /*gets rid of underline links and change color on hover*/
 a:hover {
 	text-decoration: none;
@@ -43,39 +73,100 @@ a:hover {
 
 /*positions text that tells user that s/he can hover over
   image to view preview*/
-#hover-over-img {
+.hover-over-img {
 	margin-top: 10px;	
 	text-align: center;
+}
+
+i {
+	color: black;
+	padding-top: 5px;
+	border: solid 2px;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+}
+
+i:hover {
+	color: #cccccc;
+}
+
+/*Style for icons
+ - adjusts position of icon div, and icons in relation to each other
+ - changes colors of the links, and addes a rounded border to each icon*/
+#icons {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+/*Background image positioning and sizing
+ - adds a transition for height of image section for smaller screens*/
+#image-about {
+	background-image: url(../img/desktop.jpg);
+}
+
+#image-contact {
+	background-image: url(../img/sunset.jpg);
+}
+
+#image-about, #image-contact {
+	height: 60vh;
+}
+
+/*Style for Contact page background image
+ - positions image and changes font of text*/
+#image-about, #image-contact, #image-home {
+	transition: height 0.8s;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/*creates full-size background image that responds to viewport size
+  Also sets font style*/
+#image-home {
+	height: 100vh;
+	background-image: url(../img/julian-rooftop.jpg);
 }
 
 
 .link {
 	color: black;
-	font-size: 1.1em;
+	font-size: 16px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 24px;
+	padding-top: 24px;
 }
 
-.navbar {
-	font-family: 'Varela Round', sans-serif;
+#navbar {
 	background-color: rgba(192,192,192,0.5);
 	border: none;
 	height: 60px;
 }
 .navitem {
 	display: inline;
-	padding-right: 15px;
 	text-decoration: none;
 }
 #navlist {
 	float: right;
 	margin-top: 17px;
+	padding-right: 15px;
 }
 
-/*style for projects section: 
- - sets fonts, font sizes, font weight
- - positions png/gifs of projects*/
-#projects {
-	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
+/*Positioning and sizing of profile image
+ - adds transitions to adjust image size for smaller screens*/
+#profile-pic {
+	width: 240px;
+	height: auto;
+	top: 60%;
+	transition: top 0.8s;
+	border: 4px solid white;
+	border-radius: 50%;
 }
+
+/*style for projects section: */
 .projectGif {
 	display: block;
 	margin-left: auto; 
@@ -86,7 +177,7 @@ a:hover {
 }
 #project-heading {
 	text-align: center;
-	font-size: 38pt;
+	font-size: 51px;
 }
 .projectContainer {
 	margin-top: 40px;
@@ -94,9 +185,7 @@ a:hover {
 	width: 85%;
 	max-width: 978px;
 }
-.text-body {
-	font-size: 13pt;
-}
+
 .proj-title {
 	font-weight: bold;
 }
@@ -109,184 +198,85 @@ a:hover {
 }
 
 .proj-title, #skills, #getintouch {
-	font-size: 25pt;
-}
-
-.subtitle-main {
-	margin-top: 10px;
-	margin-bottom: 5px;
-	font-size: 2em;
-	transition: font-size 1s;
-	animation-delay:0.7s; 
-	-moz-animation-delay:0.7s; 
-	-webkit-animation-delay:0.7s;
-
-}
-.title {
-	font-weight: bold;
-	font-size: 43pt;
-	margin: 0;
-	transition: font-size 0.5s;
-}
-
-/*Settings to optimize for mobile devices*/
-@media screen and (max-width: 768px) {
-	/*Change title font size*/
-	.title {
-		font-size: 3em;
-	}
-	/*change subtitle font size*/
-	.subtitle-main {
-		font-size: 1.5em;
-	}
-	/*center text*/
-	.project-info {
-		text-align: center;
-	}
-
-	.text-body {
-		font-size: 11pt;
-	}
-}
-/*STYLING FOR ABOUT PAGE
------------------------------------------------------------------------------------------------------------*/
-/*Background image positioning and sizing
- - adds a transition for height of image section for smaller screens*/
-#image-about {
-	background-image: url(../img/desktop.jpg);
-	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
-	height: 60vh;
-	transition: height 0.8s;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-/*Positioning and sizing of profile image
- - adds transitions to adjust image size for smaller screens*/
-#profile-pic {
-	width: 240px;
-	height: auto;
-	position: absolute;
-	top: 60%;
-	transition: top 0.8s;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-	text-align: center;
-	border: 4px solid white;
-	border-radius: 50%;
-}
-
-/*Styling for body section of about page
- - adds font and positioning, as well as transition to adjust size*/
-#bio {
-	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
-	margin-top: 140px;
-	transition: margin-top 0.5s;
-	font-size: 1.3em;
-	max-width: 750px;
-	margin-bottom: 3em;
-}
-
-/*Optimizes for medium sized laptop screens
- - adjusts profile pic size
- - adjusts position of about header*/
-@media screen and (max-width: 1280px) {
-	.profile-pic {
-		width: 300px;
-	}
-}
-/*Optimizes for mobile devices
- - changes font size of bio section and about header*/
-@media screen and (max-width: 768px) {
-	.bio {
-		font-size: 1.1em;
-	}
-	.about {
-		font-size: 20pt;
-	}
-}
-/*Optimizes for smartphone screens
- - adjusts position of bio section
- - adjusts size of profile pic*/
-@media screen and (max-width: 480px) {
-	.bio {
-		margin-top: 100px;
-	}
-	.profile-pic {
-		width: 20px;
-	}
-}
-
-
-/*STYLING FOR CONTACT PAGE
------------------------------------------------------------------------------------------------------------*/
-/*Style for Contact page background image
- - positions image and changes font of text*/
-div.image-contact {
-	background-image: url(../img/sunset.jpg);
-	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
-	height: 60vh;
-	transition: height 0.8s;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
+	font-size: 33px;
 }
 
 /*style for contact title (text over background image)
  - positions on page, and changes font color*/
 .sectiontitle {
-	position: absolute;
 	top: 30%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-	text-align: center;
 }
 
-/*Style for body of contact page
- - sets body font, and aligns text to center*/
-.contact {
-	font-family: 'Karla', Helvetica Neue, Helvetica, sans-serif;
-	text-align: center;
-	font-size: 1.3em;
-	max-width: 750px;
-}
-
-/*Adjusts positioning of "get in touch" text*/
-h3#getintouch {
-	text-align: center;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-}
-/*adjusts position of text before icons*/
-p#text-before-icons {
-	margin-top: 50px;
-	margin-bottom: 20px;
-}
-
-/*Style for icons
- - adjusts position of icon div, and icons in relation to each other
- - changes colors of the links, and addes a rounded border to each icon*/
-div#icons {
-	text-align: center;
-	margin-bottom: 2em;
-}
 .social-icon {
 	margin-left: 10px;
 	margin-right: 10px;
 }
-i {
-	color: black;
-	padding-top: 5px;
-	border: solid 2px;
-	border-radius: 50%;
-	width: 45px;
-	height: 45px;
+
+.subtitle-main {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 28px;
+	transition: font-size 1s;
+	animation-delay: 0.9s; 
+	-moz-animation-delay: 0.9s; 
+	-webkit-animation-delay: 0.9s;
+
 }
-i:hover {
-	color: #6699ff;
+
+.text-body {
+	font-size: 18px;
 }
+
+/*adjusts position of text before icons*/
+#text-before-icons {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 60px;
+	margin: 0;
+	transition: font-size 0.5s;
+	animation-delay:0.3s; 
+	-moz-animation-delay:0.3s; 
+	-webkit-animation-delay:0.3s;
+}
+
+.type {
+	font-size: 21px;
+}
+
+/*Settings to optimize for mobile devices*/
+@media screen and (max-width: 768px) {
+	#bio {
+		margin-top: 100px;
+	}
+	#image-about, #image-contact {
+		height: 45vh;
+	}
+	.link {
+		font-size: 14px;
+	}
+	#profile-pic {
+		width: 170px;
+		top: 45%;
+	}
+	.project-info {
+		text-align: center;
+	}
+	.sectiontitle {
+		top: 23%;
+	}
+	.subtitle-main {
+		font-size: 18px;
+	}
+	.text-body {
+		font-size: 16px;
+	}
+	.title {
+		font-size: 45px;
+	}
+}
+
+
