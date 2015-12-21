@@ -1,11 +1,11 @@
 // Initializes the angular app
-var app = angular.module('myApp', ['ui.router', 'ui.materialize']);
+var app = angular.module('myApp', ['ui.router']);
 
 // Configure app to give separate controller for home, and separate templateUrls for the various html fragment/templates
-app.config(function($stateProvider){
+app.config(function($stateProvider, $locationProvider, $urlRouterProvider){
 	$stateProvider
 		.state('home', {
-			url: '',
+			url: '/',
 			templateUrl: "templates/home.html",
 			controller: "HomeController"
 		})
@@ -18,7 +18,13 @@ app.config(function($stateProvider){
 			url: '/contact',
 			templateUrl: 'templates/contact.html',
 			controller: "ContactController"
-		})
+		});
+
+	$urlRouterProvider.when('', '/');
+
+	// use the HTML5 History API
+	$locationProvider.html5Mode(true);
+	$urlRouterProvider.otherwise('/404');
 });
 
 // Creates a controller for the home fragment/template, then parses through a csv file to get data
