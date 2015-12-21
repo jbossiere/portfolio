@@ -1,10 +1,10 @@
 <!-- Home page main image. It has text that floats on top upon loading, 
 	that is animated through animate.css library -->
-<div class="full-img">
-	<section class="hometitles">
+<div id="image-home">
+	<div id="hometitle">
 		<h1 class="title animated fadeInUp">My name is Julian</h1>
 		<h2 class="subtitle-main animated fadeInUp">I'm a student, coder, & designer</h2>
-	</section>
+	</div>
 </div>
 
 <!-- The main projects section which is given a bootstrap grid to change the layout on smaller screens
@@ -13,42 +13,20 @@
 	user preview the projects, and on mouseleave, they revert to pngs -->
 <div id="projects">
 	<h1 id="project-heading">Projects</h1>
-<!-- 	<div class="container-fluid">
- -->		<div class="container-fluid projectContainer" ng-repeat="project in projects">
-			<div class="row">
-				<!-- Div that changes grid position depending on window size for the project img/gif 
-				- it changes between gif and img on mouseenter and mouseleave -->
-				<div class="col-xs-12 col-md-6">
-					<img class="projectGif" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
-					<p id="hover-over-img" ng-hide="oneColumn">Hover over image to preview</p>
-				</div>
-
-				<!-- Div that changes grid position depending on window size for the project info  -->
-				<div class="col-xs-12 col-md-6 project-info">
-					<h3 class="proj-title">{{project.title}}</h3>
-					<h4>{{project.type}}</h4>
-					<p class="text-body">{{project.description}}</p>
-					<a target="_blank" href="{{project.link}}">View the live site</a>
-				</div>
-			</div>
-			<!-- Creates divier line between each separate project -->
-			<hr class="project-split">
-		</div>
-<!-- 	</div>
- -->
-	<div class="container projectContainer" ng-repeat="project in designprojects">
+	<div class="container-fluid projectContainer" ng-repeat="project in projects">
 		<div class="row">
 			<!-- Div that changes grid position depending on window size for the project img/gif 
 			- it changes between gif and img on mouseenter and mouseleave -->
 			<div class="col-xs-12 col-md-6">
 				<img class="projectGif" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
-				<p id="hover-over-img" ng-hide="oneColumn">Hover over image to preview</p>
+				<p class="hover-over-img">Hover over image to preview</p>
 			</div>
 
 			<!-- Div that changes grid position depending on window size for the project info  -->
 			<div class="col-xs-12 col-md-6 project-info">
-				<h4 class="proj-title">{{project.title}}</h4>
-				<p class="proj-body">{{project.description}}</p>
+				<h3 class="proj-title">{{project.title}}</h3>
+				<h3 class="type">{{project.type}}</h3>
+				<p class="text-body">{{project.description}}</p>
 				<a target="_blank" href="{{project.link}}">View the live site</a>
 			</div>
 		</div>
