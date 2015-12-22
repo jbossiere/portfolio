@@ -26,7 +26,7 @@
 #footer {
 	text-align: center;
 	padding: 5px 0 5px; /*padding was 35px 0px 35px when links are in footer*/
-	background-color: #f3f3f3;
+	background-color: #e6e6e6;
 }
 #footertext {
 	margin-top: 10px;
@@ -63,17 +63,23 @@ a:link {
 }
 
 a:visited {
-
+	background-color: #cccccc;
 }
+
 /*gets rid of underline links and change color on hover*/
 a:hover {
 	text-decoration: none;
 	color: #cccccc;
+
+}
+
+a:active {
+	background-color: #cccccc;
 }
 
 /*positions text that tells user that s/he can hover over
   image to view preview*/
-.hover-over-img {
+.hover-over-img, .tap-img {
 	margin-top: 10px;	
 	text-align: center;
 }
@@ -247,10 +253,20 @@ i:hover {
 	font-size: 21px;
 }
 
+@media screen and (min-width: 768px) {
+	/*hide tap-img text on screens larger than 768px*/
+	.tap-img {
+		display: none;
+	}
+}
+
 /*Settings to optimize for mobile devices*/
 @media screen and (max-width: 768px) {
 	#bio {
 		margin-top: 100px;
+	}
+	.hover-over-img {
+		display: none;
 	}
 	#image-about, #image-contact {
 		height: 45vh;
