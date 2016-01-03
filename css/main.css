@@ -57,24 +57,18 @@
 	text-align: center;
 }
 
-a:link {
+a:hover, a:link {
 	text-decoration: none;
-	color: black;
 }
-
 a:visited {
 	background-color: #cccccc;
 }
-
 /*gets rid of underline links and change color on hover*/
 a:hover {
-	text-decoration: none;
 	color: #cccccc;
-
 }
-
-a:active {
-	background-color: #cccccc;
+a:focus {
+	color: #000;
 }
 
 /*positions text that tells user that s/he can hover over
@@ -155,6 +149,9 @@ i:hover {
 	display: inline;
 	text-decoration: none;
 }
+/*.navitem a:focus{
+	color:#000;
+}*/
 #navlist {
 	float: right;
 	margin-top: 17px;
