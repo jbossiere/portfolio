@@ -21,10 +21,6 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider){
 		});
 
 	$urlRouterProvider.when('', '/');
-
-	// use the HTML5 History API
-	// $locationProvider.html5Mode(true);
-	// $urlRouterProvider.otherwise('/404');
 });
 
 // Creates a controller for the home fragment/template, then parses through a csv file to get data
@@ -47,6 +43,12 @@ app.controller('HomeController', function($scope, $location, $anchorScroll){
 			$scope.$apply();
 		}
 	});
+
+	// $scope.goToProjects = function() {
+	// 	console.log('ohhihello');
+	// 	$location.hash("projects");
+	// 	$anchorScroll();
+	// };
 });
 
 app.controller("AboutController", function($scope, $location, $anchorScroll){
