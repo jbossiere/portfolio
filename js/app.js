@@ -25,7 +25,6 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider){
 
 // Creates a controller for the home fragment/template, then parses through a csv file to get data
 // to show on the page.  
-// - $scope.mainUrl is used in the HTML to switch between static and gif image
 // - $scope.$apply() is used because papa.parse is asynchronous and not angular, angular has it's own
 // 	 event loop, but since papa.parse is not part of it, it doesn't automatically get updated with the 
 // 	 rest of angular.  the $apply() tells angular to update for this controller
@@ -43,12 +42,6 @@ app.controller('HomeController', function($scope, $location, $anchorScroll){
 			$scope.$apply();
 		}
 	});
-
-	// $scope.goToProjects = function() {
-	// 	console.log('ohhihello');
-	// 	$location.hash("projects");
-	// 	$anchorScroll();
-	// };
 });
 
 app.controller("AboutController", function($scope, $location, $anchorScroll){

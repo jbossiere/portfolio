@@ -7,23 +7,17 @@
 	</div>
 </div>
 
-<!-- The main projects section which is given a bootstrap grid to change the layout on smaller screens
-	Images, and information for the project section are taken from the csv file that is parsed in app.js
-	the project images are initialized as regular png files, but on mouseenter they turn into .gif files that let the
-	user preview the projects, and on mouseleave, they revert to pngs -->
 <div id="projects">
 	<h1 id="project-heading">Projects</h1>
 	<div class="container-fluid projectContainer" ng-repeat="project in projects">
 		<div class="row">
-			<!-- Div that changes grid position depending on window size for the project img/gif 
-			- it changes between gif and img on mouseenter and mouseleave -->
+			
 			<div class="col-xs-12 col-md-6">
 				<img class="projectGif" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
 				<p class="hover-over-img">Hover over image to preview</p>
 				<p class="tap-img">Tap image to preview</p>
 			</div>
 
-			<!-- Div that changes grid position depending on window size for the project info  -->
 			<div class="col-xs-12 col-md-6 project-info">
 				<h3 class="proj-title">{{project.title}}</h3>
 				<h3 class="type">{{project.type}}</h3>
