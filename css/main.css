@@ -25,7 +25,7 @@
 
 #footer {
 	text-align: center;
-	padding: 5px 0 5px; /*padding was 35px 0px 35px when links are in footer*/
+	padding: 20px 0 20px; /*padding was 35px 0px 35px when links are in footer*/
 	background-color: #e6e6e6;
 }
 #footertext {
