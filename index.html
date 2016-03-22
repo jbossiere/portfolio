@@ -10,6 +10,9 @@
 	  	<!-- jQuery Library -->
 	  	<script src="https://code.jquery.com/jquery.min.js"></script>
 
+	  	<!-- Smoothscroll -->
+	  	<script type="text/javascript" src="js/smoothscroll.js"></script>
+
 	  	<!-- Bootstrap CSS and JavaScript -->
 	  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -35,12 +38,12 @@
 	</head>
 
 	<body>
-		<div ng-app="myApp" ng-controller="myCtrl">
+		<div id="top">
 
  			<div id="navbar" class="navbar navbar-default navbar-fixed-top">
 	 			<nav>
 	 				<ul id="navlist">
- 						<li class="navitem"><a class="link smoothScroll" href="#">Home</a></li>
+ 						<li class="navitem"><a class="link smoothScroll" href="#top">Home</a></li>
  						<li class="navitem"><a class="link smoothScroll" href="#projects-body">Projects</a></li>
  						<li class="navitem"><a class="link smoothScroll" href="#about">About</a></li>
  						<li class="navitem"><a class="link smoothScroll" href="#contact">Contact</a></li>
@@ -54,7 +57,7 @@
 			</div> -->
 
 			<!-- HOME -->
-			<div id="projects-body">
+			<div id="projects">
 				<div id="image-home">
 					<div id="hometitle">
 						<h1 class="title animated fadeInUp">My name is Julian</h1>
@@ -62,7 +65,7 @@
 					</div>
 				</div>
 
-				<div id="projects">
+				<div id="projects-body">
 					<h1 id="project-heading">Projects</h1>
 					<!-- <div class="container-fluid projectContainer" ng-repeat="project in projects">
 						<div class="row">
