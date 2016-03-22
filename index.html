@@ -35,22 +35,188 @@
 	</head>
 
 	<body>
-		<div ng-app="myApp">
+		<div ng-app="myApp" ng-controller="myCtrl">
 
  			<div id="navbar" class="navbar navbar-default navbar-fixed-top">
 	 			<nav>
 	 				<ul id="navlist">
- 						<li class="navitem"><a class="link" ui-sref="home">Home</a></li>
- 						<!-- <li class="navitem"><a class="link" ui-sref="projects">Projects</a></li> -->
- 						<li class="navitem"><a class="link" ui-sref="about">About</a></li>
- 						<li class="navitem"><a class="link" ui-sref="contact">Contact</a></li>
+ 						<li class="navitem"><a class="link smoothScroll" href="#">Home</a></li>
+ 						<li class="navitem"><a class="link smoothScroll" href="#projects-body">Projects</a></li>
+ 						<li class="navitem"><a class="link smoothScroll" href="#about">About</a></li>
+ 						<li class="navitem"><a class="link smoothScroll" href="#contact">Contact</a></li>
  					</ul>
 	 			</nav>
 	 		</div>
 
 	 		<!-- The div where all of my HTML fragments will are redirected to -->
-			<div>
+			<!-- <div>
 				<div ui-view></div>
+			</div> -->
+
+			<!-- HOME -->
+			<div id="projects-body">
+				<div id="image-home">
+					<div id="hometitle">
+						<h1 class="title animated fadeInUp">My name is Julian</h1>
+						<h2 class="subtitle-main animated fadeInUp">I'm a student, coder, & designer</h2>
+					</div>
+				</div>
+
+				<div id="projects">
+					<h1 id="project-heading">Projects</h1>
+					<!-- <div class="container-fluid projectContainer" ng-repeat="project in projects">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6">
+								<img class="projectImg" ng-init="mainUrl = project.imgUrl" ng-src="{{mainUrl}}" ng-mouseenter="mainUrl = project.gifUrl" ng-mouseleave="mainUrl = project.imgUrl">
+								<p class="hover-over-img">Hover over image to preview</p>
+								<p class="tap-img">Tap image to preview</p>
+							</div>
+							<div class="col-xs-12 col-sm-6 project-info">
+								<h3 class="proj-title">{{project.title}}</h3>
+								<h3 class="type">{{project.type}}</h3>
+								<p class="text-body">{{project.description}}</p>
+								<a target="_blank" href="{{project.link}}">View the live site</a>
+							</div>
+						</div>
+						<hr class="project-split">
+					</div> -->
+					<!-- PINPOINT -->
+					<div class="container-fluid projectContainer">
+						<div class="row">
+							<!-- IMG -->
+							<div class="col-xs-12 col-sm-6">
+								<img class="projectImg" src="img/projects/pinpoint.png">
+							</div>
+							<!-- DESCRIPTION -->
+							<div class="col-xs-12 col-sm-6 project-info">
+								<h3 class="proj-title">Pinpoint</h3>
+								<h3 class="type">UI/UX Design</h3>
+								<p class="text-body">A web-based process book created for my Design Thinking class. It goes through the steps my team and I took in order to design a solution to a problem that falls under the theme,  "Surviving College."</p>
+								<ul class="skills">
+									<li>Prototyping</li>
+									<li>User-testing</li>
+									<li>Ideation</li>
+									<li>Process Book</li>
+								</ul>
+								<a target="_blank" href="http://students.washington.edu/jgb93/info360/pinpoint/">View the live site</a>
+							</div>
+						</div>
+						<hr class="project-split">
+					</div>
+					<!-- SPOFITY -->
+					<div class="container-fluid projectContainer">
+						<div class="row">
+							<!-- IMG -->
+							<div class="col-xs-12 col-sm-6">
+								<img class="projectImg" src="img/projects/spofityy.png">
+							</div>
+							<!-- DESCRIPTION -->
+							<div class="col-xs-12 col-sm-6 project-info">
+								<h3 class="proj-title">Spofity</h3>
+								<h3 class="type">Web Development</h3>
+								<p class="text-body">An assignment where I used the Spotify API in combination with AngularJS.  There's an artist search that can be filtered to show specific songs or albums.  Users can listen to previews of the track, which leads to a simultaneous display of recent Instagram photos (using the Instagram API) tagged with #trackname.</p>
+								<ul class="skills">
+									<li>HTML5/CSS3</li>
+									<li>JavaScript</li>
+									<li>Bootstrap 3</li>
+									<li>AngularJS</li>
+									<li>SpotifyAPI</li>
+									<li>InstagramAPI</li>
+								</ul>
+								<a target="_blank" href="http://students.washington.edu/jgb93/info343/spofity/">View the live site</a>
+							</div>
+						</div>
+						<hr class="project-split">
+					</div>
+					<!-- POLICE SHOOTING -->
+					<div class="container-fluid projectContainer">
+						<div class="row">
+							<!-- IMG -->
+							<div class="col-xs-12 col-sm-6">
+								<img class="projectImg" src="img/projects/policeshootings.png">
+							</div>
+							<!-- DESCRIPTION -->
+							<div class="col-xs-12 col-sm-6 project-info">
+								<h3 class="proj-title">Police Shooting</h3>
+								<h3 class="type">Web Development</h3>
+								<p class="text-body">An interactive map of crowdsourced police shooting data. Plotted points on the map indicate where police shootings occurred.  Points can be clicked for more information, and layers can be changed to show various shootings for males, females, and unknown/unspecified gender.</p>
+								<ul class="skills">
+									<li>HTML5/CSS3</li>
+									<li>JavaScript</li>
+									<li>Bootstrap 3</li>
+									<li>jQuery/AJAX</li>
+									<li>Leaflet.js</li>
+								</ul>
+								<a target="_blank" href="http://students.washington.edu/jgb93/info343/police-shooting/">View the live site</a>
+							</div>
+						</div>
+						<hr class="project-split">
+					</div>
+					<!-- REVIEWS -->
+					<div class="container-fluid projectContainer">
+						<div class="row">
+							<!-- IMG -->
+							<div class="col-xs-12 col-sm-6">
+								<img class="projectImg" style="border: solid 1px" src="img/projects/reviews capture.png">
+							</div>
+							<!-- DESCRIPTION -->
+							<div class="col-xs-12 col-sm-6 project-info">
+								<h3 class="proj-title">Reviews</h3>
+								<h3 class="type">Web Development</h3>
+								<p class="text-body">A basic, and slightly silly user-reviews system created to practice making a CRUD web application. It utilizes Parse.com - the cloud-based database to store user input. It dynamically displays reviews in the feed. Reviews can be up/downvoted or deleted - although currently any user can delete any comment."</p>
+								<ul class="skills">
+									<li>HTML5/CSS3</li>
+									<li>JavaScript</li>
+									<li>Bootstrap 3</li>
+									<li>jQuery/AJAX</li>
+									<li>Database</li>
+									<li>CRUD</li>
+								</ul>
+								<a target="_blank" href="http://students.washington.edu/jgb93/info343/User-Reviews/">View the live site</a>
+							</div>
+						</div>
+						<hr class="project-split">
+					</div>
+				</div>
+			</div>
+
+			<!-- ABOUT -->
+			<div id="about">
+				<div id="banner-about"></div>
+
+				<div class="container-fluid text-body" id="bio">
+					<div id="profileImg-div">
+						<img id="profile-pic" src="img/julian-cafe.jpg">
+					</div>
+					<h2 class="section-title">About Me</h3>
+					<p>Hi! My name is Julian Bossiere and I'm currently an undergraduate student at University of Washington, working towards a BS in Informatics - the study of people, technology and information.</p>
+
+					<h3 class="subtitle">Skills</h3>
+					<p>Currently, I'm developing my skills in both design and coding. I can build mobile-first, dynamic, and responsive websites/web apps using my design thinking skills in combination with HTML5, CSS3, and JavaScript. I've accomplished this by utilizing frameworks such as Bootstrap 3 and AngularJS, and libraries like jQuery/AJAX.</p>
+
+					<p>I know about data structures and algorithms used in coding, and soon, will be learning about databases and server-side web development.</p>
+
+					<h3 class="subtitle">Other Interests</h3>
+					<p>I'm also passionate about music. I love to sing, and play piano and guitar. I mostly play cover songs by my favorite musicians, but I've also been trying to get into songwriting. I also enjoy learning foreign languages. I speak Japanese fluently, and I'm studying Korean at school.  Being half-Japanese and living in Japan for part of my life, I've grown up in a mix of cultures, and this has added to my appreciation of foreign languages and culture.</p>
+				</div>
+			</div>
+
+			<!-- CONTACT -->
+			<div id="contact">
+				<div id="banner-contact"></div>
+
+				<div class="container-fluid text-body" id="contact-body">
+					<h3 class="section-title">Get In Touch</h3>
+					<p>The easiest way to get in contact with me is through email.</p>
+					<a id="emailAddress" href="mailto:julianbossiere@gmail.com">julianbossiere@gmail.com</a>
+					<p id="text-before-icons">But if email isn't your thing, you can find me on social media as well.</p>
+				</div>
+
+				<div id="icons" class="container-fluid">
+					<a class="social-icon" target="_blank" href="https://www.facebook.com/himatsuri"><i class="fa fa-facebook fa-2x"></i></a>
+					<a class="social-icon" target="_blank" href="https://www.linkedin.com/in/julianbossiere"><i class="fa fa-linkedin fa-2x"></i></a>
+					<a class="social-icon" target="_blank" href="https://github.com/jbossiere"><i class="fa fa-github fa-2x"></i></a>
+				</div>
 			</div>
 
 			<div id="footer">

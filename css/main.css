@@ -4,22 +4,24 @@
 /*Styling for body section of about page
  - adds font and positioning, as well as transition to adjust size*/
 #bio {
-	margin-top: 140px;
-	transition: margin-top 0.5s;
-	margin-bottom: 3em;
+	margin: -6em auto 8em auto;
+	/*transition: margin-top 0.5s;*/
 }
 
-#bio, #contact {
+#bio, #contact-body {
 	max-width: 750px;
 }
 
-#bio, #contact, #projects {
+#bio, #contact-body, #projects {
 	font-family: 'Lato', Helvetica Neue, Helvetica, sans-serif;
 }
 
+#contact {
+	margin-bottom: 4em;
+}
 /*Style for body of contact page
  - sets body font, and aligns text to center*/
-#contact {
+#contact-body {
 	text-align: center;
 }
 
@@ -32,7 +34,7 @@
 	margin-top: 10px;
 }
 
-#footer, #navbar, #image-about, #image-contact, #image-home {
+#footer, #navbar, #image-home {
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 }
 
@@ -49,8 +51,15 @@
 	top: 54%;
 }
 
-#hometitle, .sectiontitle, #profile-pic {
+/*#hometitle, .sectiontitle, #profile-pic {
 	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}*/
+#hometitle {
+	position: relative;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
@@ -101,21 +110,21 @@ i:hover {
 
 /*Background image positioning and sizing
  - adds a transition for height of image section for smaller screens*/
-#image-about {
+#banner-about {
 	background-image: url(../img/desktop.jpg);
 }
 
-#image-contact {
+#banner-contact {
 	background-image: url(../img/sunset.jpg);
 }
 
-#image-about, #image-contact {
+#banner-about, #banner-contact {
 	height: 60vh;
 }
 
 /*Style for Contact page background image
  - positions image and changes font of text*/
-#image-about, #image-contact, #image-home {
+#banner-about, #banner-contact, #image-home {
 	transition: height 0.8s;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -158,27 +167,34 @@ i:hover {
 	padding-right: 15px;
 }
 
+#profileImg-div {
+	width: 35%;
+	max-width: 200px;
+	margin: 0 auto 2em;
+}
+
 /*Positioning and sizing of profile image
  - adds transitions to adjust image size for smaller screens*/
 #profile-pic {
-	width: 240px;
-	height: auto;
-	top: 60%;
-	transition: top 0.8s;
+	max-width: 100%;
 	border: 4px solid white;
 	border-radius: 50%;
 }
 
+#projects {
+	margin-bottom: 5em;
+}
 /*style for projects section: */
-.projectGif {
+.projectImg {
 	display: block;
-	margin-left: auto; 
-	margin-right: auto;
+	margin: 30px auto 0 auto;
+/*	margin-left: auto; 
+	margin-right: auto;*/
 	width: 100%;
 	height: auto;
-	border: solid 1px;
 }
 #project-heading {
+	margin-top: 1em;
 	text-align: center;
 	font-size: 51px;
 }
@@ -200,19 +216,38 @@ i:hover {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.proj-title, .about-body, #getintouch {
+.proj-title, #getintouch {
 	font-size: 33px;
 }
 
 /*style for contact title (text over background image)
  - positions on page, and changes font color*/
-.sectiontitle {
+/*.sectiontitle {
+	position: relative;
 	top: 30%;
+	color: white;
+	text-align: center;
+}*/
+.skills {
+	padding-left: 0px;
+}
+.skills li{
+	display: inline;
+	font-weight: bold;
+	line-height: 220%;
+	padding: 4px 9px;
+	margin-right: 5px;
+	background-color: #bfbfbf;
+	border-radius: 4px;
 }
 
 .social-icon {
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.subtitle {
+	font-weight: bold;
 }
 
 .subtitle-main {
@@ -246,6 +281,12 @@ i:hover {
 	-webkit-animation-delay:0.3s;
 }
 
+.section-title {
+	text-align: center;
+	font-size: 2.5em;
+	margin-bottom: 1.3em;
+}
+
 .type {
 	font-size: 21px;
 }
@@ -260,26 +301,23 @@ i:hover {
 /*Settings to optimize for mobile devices*/
 @media screen and (max-width: 768px) {
 	#bio {
-		margin-top: 100px;
+		/*margin-top: 100px;*/
+		margin-bottom: 5em;	
 	}
 	.hover-over-img {
 		display: none;
 	}
-	#image-about, #image-contact {
+	#banner-about, #banner-contact {
 		height: 45vh;
 	}
 	.link {
 		font-size: 14px;
 	}
-	#profile-pic {
-		width: 170px;
-		top: 45%;
+	#profileImg-div {
+		margin: 1.5em auto 2em;
 	}
 	.project-info {
 		text-align: center;
-	}
-	.sectiontitle {
-		top: 23%;
 	}
 	.subtitle-main {
 		font-size: 18px;
