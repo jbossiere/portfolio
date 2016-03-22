@@ -12,7 +12,7 @@
 	max-width: 750px;
 }
 
-#bio, #contact-body, #projects {
+#bio, #contact-body, #projects-body {
 	font-family: 'Lato', Helvetica Neue, Helvetica, sans-serif;
 }
 
@@ -181,7 +181,7 @@ i:hover {
 	border-radius: 50%;
 }
 
-#projects {
+#projects-body {
 	margin-bottom: 5em;
 }
 /*style for projects section: */
