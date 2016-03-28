@@ -38,28 +38,10 @@
 	font-family: 'Varela Round', Helvetica Neue, Helvetica, sans-serif;
 }
 
-/*Adjusts positioning of "get in touch" text*/
-#getintouch {
-	text-align: center;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-}
-
-
 /*style for titles (that appear over the image)*/
 #hometitle {
-	top: 54%;
-}
-
-/*#hometitle, .sectiontitle, #profile-pic {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-	text-align: center;
-}*/
-#hometitle {
 	position: relative;
+	top: 54%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
@@ -80,13 +62,6 @@ a:focus {
 	color: #000;
 }
 
-/*positions text that tells user that s/he can hover over
-  image to view preview*/
-.hover-over-img, .tap-img {
-	margin-top: 10px;	
-	text-align: center;
-}
-
 i {
 	color: black;
 	padding-top: 5px;
@@ -95,7 +70,6 @@ i {
 	width: 45px;
 	height: 45px;
 }
-
 i:hover {
 	color: #cccccc;
 }
@@ -122,7 +96,7 @@ i:hover {
 	height: 60vh;
 }
 
-/*Style for Contact page background image
+/*Style for background image
  - positions image and changes font of text*/
 #banner-about, #banner-contact, #image-home {
 	transition: height 0.8s;
@@ -132,8 +106,7 @@ i:hover {
 	background-size: cover;
 }
 
-/*creates full-size background image that responds to viewport size
-  Also sets font style*/
+/*creates full-size background image that responds to viewport size*/
 #image-home {
 	height: 100vh;
 	background-image: url(../img/julian-rooftop.jpg);
