@@ -25,6 +25,10 @@
 	text-align: center;
 }
 
+.description {
+	color: #666666;
+}
+
 #footer {
 	text-align: center;
 	padding: 20px 0 20px; /*padding was 35px 0px 35px when links are in footer*/
@@ -152,6 +156,10 @@ i:hover {
 	max-width: 100%;
 	border: 4px solid white;
 	border-radius: 50%;
+}
+
+#proj-header-img {
+	width: 100%;
 }
 
 #projects-body {
